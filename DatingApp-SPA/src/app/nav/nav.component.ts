@@ -21,14 +21,16 @@ model: any = {};
     this.authservice.login(this.model).subscribe(next => {
       console.log('logged in successfully');
     }, error => {
-      console.log('Failed to Login');
+      console.log(error);
     });
   }
 
+  // tslint:disable-next-line: typedef
   loggedIn(){
     const token = localStorage.getItem('token');
     return !!token;
   }
+  // tslint:disable-next-line: typedef
   logout(){
     localStorage.removeItem('token');
     console.log('Logged out');
