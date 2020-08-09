@@ -18,7 +18,7 @@ export class AlertifyService {
 
   // tslint:disable-next-line: typedef
   success(message: string) {
-    alertify.sucess(message);
+    alertify.success(message);
   }
   // tslint:disable-next-line: typedef
   error(message: string) {
