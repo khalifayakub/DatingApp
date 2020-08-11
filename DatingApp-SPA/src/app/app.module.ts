@@ -8,6 +8,7 @@ import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { UserService } from './_services/user.service';
 import {MemberDetailResolver} from './_resolvers/member-detail.resolver';
 import {MemberListResolver} from './_resolvers/member-list.resolver';
 import {MemberEditResolver} from './_resolvers/member-edit.resolver';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 
 
 // tslint:disable-next-line:typedef
@@ -49,6 +51,7 @@ export function tokenGetter(){
       MemberListComponent,
       MemberDetailComponent,
       MemberEditComponent,
+      PhotoEditorComponent,
       ListsComponent,
       MessagesComponent
    ],
@@ -58,6 +61,7 @@ export function tokenGetter(){
       FormsModule,
       BrowserAnimationsModule,
       NgxGalleryModule,
+      FileUploadModule,
       BsDropdownModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       TabsModule.forRoot(),
