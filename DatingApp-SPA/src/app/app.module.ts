@@ -35,6 +35,7 @@ import {MemberDetailResolver} from './_resolvers/member-detail.resolver';
 import {MemberListResolver} from './_resolvers/member-list.resolver';
 import {MemberEditResolver} from './_resolvers/member-edit.resolver';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { ListResolver } from './_resolvers/lists.resolver';
 
 
 // tslint:disable-next-line:typedef
@@ -90,7 +91,8 @@ export function tokenGetter(){
       UserService,
       MemberDetailResolver,
       MemberListResolver,
-      MemberEditResolver
+      MemberEditResolver,
+      ListResolver
    ],
    bootstrap: [
       AppComponent
