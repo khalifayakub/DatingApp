@@ -24,6 +24,7 @@ newMessage: any = {};
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
+this.loadMessages();
   }
 
   // tslint:disable-next-line: typedef

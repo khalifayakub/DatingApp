@@ -26,7 +26,7 @@ namespace DatingApp.API.Controllers
             _repo = repo;
 
         }
-        [HttpGet("{id", Name="GetMessage")]
+        [HttpGet("{id}", Name="GetMessage")]
         public async Task<IActionResult> GetMessage(int userId, int id)
         {
                 if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
@@ -101,7 +101,7 @@ namespace DatingApp.API.Controllers
             throw new System.Exception("Creating the message failed on save");
         }
 
-        [HttpPost("{id")]
+        [HttpPost("{id}")]
         public async Task<IActionResult> DeleteMessage(int id, int userId)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
